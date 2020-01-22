@@ -1,36 +1,33 @@
 {
-  "name": "nunjucks-hapi",
-  "version": "2.1.0",
-  "description": "A simple wrapper to use Nunjucks templates in Hapi",
-  "main": "index.js",
-  "scripts": {
-    "test": "lab --leaks -c test/tests"
-  },
+  "name": "@modernpoacher/nunjucks",
+  "version": "3.0.0",
+  "description": "Nunjucks for Hapi",
+  "main": "./index.js",
   "license": "MIT",
-  "dependencies": {
-    "lodash.defaults": "^3.1.0",
-    "nunjucks": "^2.3.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/seldo/nunjucks-hapi.git"
-  },
-  "devDependencies": {
-    "code": "~1.2.1",
-    "hapi": "~8.0.0",
-    "lab": "~5.1.1",
-    "restify": "~2.8.4"
-  },
-  "bugs": {
-    "url": "https://github.com/seldo/nunjucks-hapi/issues"
-  },
-  "homepage": "https://github.com/seldo/nunjucks-hapi",
-  "directories": {
-    "example": "example",
-    "test": "test"
-  },
   "keywords": [
     "hapi",
     "nunjucks"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/modernpoacher/nunjucks.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.6.4",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "peerDependencies": {
+    "nunjucks": "^3.2.0"
+  }
 }

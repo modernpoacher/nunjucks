@@ -1,49 +1,38 @@
-var Nunjucks = require('nunjucks');
-var _defaults = require('lodash.defaults');
+const Nunjucks = require('nunjucks')
 
-var wrapper = {};
+let ENVIRONMENT
 
-var env = undefined;
+function compile (src, options = {}, next) {
+  const template = Nunjucks.compile(src, ENVIRONMENT || (ENVIRONMENT = options.environment), (Reflect.has(options, 'filename') ? Reflect.get(options, 'filename') : null))
 
-wrapper.compile = function (src, options, callback) {
+  return (next instanceof Function)
+    ? next(null, (context, options, next) => template.render(context, next))
+    : (context) => template.render(context)
+}
 
-  // Get if compile mode is async by checking if the callback is defined
-  var asyncCompileMode = (typeof callback === 'function');
+function prepare (options = {}, next = () => {}) {
+  const {
+    path,
+    compileOptions = {}
+  } = options
 
-  // Nunjucks will know where the templates are from the environment
-  var template = Nunjucks.compile(src, env || options.environment, (Object.hasOwnProperty(options,'filename') ? options.filename : null) );
-
-  if (asyncCompileMode) {
-
-    // Render the template in the asynchronous way
-    var renderer = function (context, options, next) {
-      template.render(context, next);
-    };
-
-    return callback(null, renderer);
-
-  } else {
-
-    // Render the template in the synchronous way
-    return function (context, options) {
-      return template.render(context);
-    };
+  options.compileOptions = {
+    ...compileOptions,
+    environment: ENVIRONMENT || configure(path, { watch: false })
   }
 
+  return next()
 }
 
-wrapper.prepare = function (options, next) {
-  // if we've overridden our environment we use it, otherwise we go with a default
-  options.compileOptions.environment = env || Nunjucks.configure(options.path, { watch : false });
-  return next();
-}
-
-// the configure() method lets us override the environment to add filters etc
-wrapper.configure = function (path, options) {
-  return env = Nunjucks.configure(path, options || { watch : false });
+function configure (path, options = { watch: false }) {
+  return (
+    ENVIRONMENT = Nunjucks.configure(path, options)
+  )
 };
 
-// In all other ways be exactly the same as Nunjucks
-wrapper = _defaults(wrapper, Nunjucks);
-
-exports = module.exports = wrapper;
+module.exports = {
+  ...Nunjucks,
+  compile,
+  prepare,
+  configure
+}

@@ -1,0 +1,6 @@
+.eslintignore
+.eslintrc
+
+# NPM
+.npmignore
+.npmrc

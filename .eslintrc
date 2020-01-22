@@ -1,0 +1,12 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "standard"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 10
+  },
+  "parser": "babel-eslint"
+}
