@@ -1,6 +1,6 @@
 # @modernpoacher/nunjucks
 
-[Nunjucks](http://mozilla.github.io/nunjucks/api.html) for [Hapi](http://hapijs.com/api).
+[Nunjucks](http://mozilla.github.io/nunjucks/api.html) for [Hapi](https://hapi.dev/api).
 
 ## Usage
 
