@@ -1,85 +1,88 @@
-# nunjucks-hapi
-A simple wrapper to let you use Nunjucks as a Hapi templating engine.
+# @modernpoacher/nunjucks
 
-[Nunjucks documentation](http://mozilla.github.io/nunjucks/api.html)
-
-[Hapi documentation](http://hapijs.com/api)
+[Nunjucks](http://mozilla.github.io/nunjucks/api.html) for [Hapi](http://hapijs.com/api).
 
 ## Usage
 
-The following example will let you use Nunjucks templates, including template
-inheritance, inside Hapi. This assumes:
+The example assumes:
 
-* your templates are in a directory called "views"
-* they have the extension "html"
-* you have a template file in there called "mytemplate"
+* templates are in a directory named "views"
+* templates have the extension "html"
+* there is a template named "mytemplate"
 
 ```javascript
-var Hapi = require('hapi')
-var Path = require('path')
-var NunjucksHapi = require('nunjucks-hapi')
-var Vision = require('vision')
+const Hapi = require('hapi')
+const path = require('path')
+const Vision = require('vision')
+const Nunjucks = require('@modernpoacher/nunjucks')
 
-var server = new Hapi.Server()
-server.connection({port:5000,host:'localhost'})
+const server = Hapi.server({ host, port })
 
-// set up templates
-server.register(Vision, function(err) {
-  server.views({
-    engines: {
-      html: NunjucksHapi
-    },
-    path: Path.join(__dirname, 'views')
+server.register(Vision)
+  .then(() => { 
+    server.views({
+      relativeTo: currentDir,
+        path: path.join(__dirname, 'views'),
+        engines: {
+          html: {
+            module: Nunjucks
+          }
+        }
+      }
+    })
+
+    server.route({
+      method: 'GET',
+      path: '/test',
+      handler: (request, h) => (
+        h.view('mytemplate', {
+          myvariable: 'myvalue'
+        })
+      )
+    })
   })
-
-  // Add a route
-  server.route({
-    method: 'GET',
-    path: '/test',
-    handler: function (request, reply) {
-      reply.view('mytemplate',{
-        'myvariable': 'myvalue'
-      })
-    }
-  })
-
-  // start server
-  server.start()
-})
+  .then(() => server.start())
 ```
 
-### Using Nunjucks filters and environments
+### With Nunjucks filters, etc
 
-If you want to go beyond the default configuration of Nunjucks, you
-need to configure an environment. Once that's done, you can do
-anything to the environment, like add filters or custom tags via
-extensions. This works just like the Nunjucks documentation says it
-does, with the exception that the path to templates is now **required**.
-
-The example is otherwise the same as the above
+To go beyond the default configuration of Nunjucks, you must configure an `environment`. (A `viewPath` is _required_.)
 
 ```javascript
-var NunjucksHapi = require('nunjucks-hapi');
+const Nunjucks = require('@modernpoacher/nunjucks');
 
-// set a common view path
-var viewPath = Path.join(__dirname, 'views')
+// set the view path
+const viewPath = path.join(__dirname, 'views')
 
-var env = NunjucksHapi.configure(viewPath)
+const env = Nunjucks.configure(viewPath)
 
 // do anything you want to the env here
-env.addFilter('somefilter', function(str, count) {
+env.addFilter('somefilter', (str, count) => {
   // return some string
 })
 
-// set up templates with the same view path
-server.register(Vision, function(err) {
-  server.views({
-    engines: {
-      html: NunjucksHapi
-    },
-    path: viewPath
-  })
+server.register(Vision)
+  .then(() => { 
+    server.views({
+      relativeTo: currentDir,
+        path: viewPath,
+        engines: {
+          html: {
+            module: Nunjucks
+          }
+        }
+      }
+    })
 
-  server.start()
-})
+    server.route({
+      method: 'GET',
+      path: '/test',
+      handler: (request, h) => (
+        h.view('mytemplate', {
+          myvariable: 'myvalue'
+        })
+      )
+    })
+  })
+  .then(() => server.start())
 ```
