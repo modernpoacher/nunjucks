@@ -12,6 +12,12 @@
     "type": "git",
     "url": "https://github.com/modernpoacher/nunjucks.git"
   },
+  "scripts": {
+    "prepublishOnly": "npm run lint:fix",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "pre-commit": "npm run lint:fix && git add *.js"
+  },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
