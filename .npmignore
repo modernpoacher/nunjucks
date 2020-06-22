@@ -1,8 +1,15 @@
+.DS_Store
+
 .circleci
+.github
 
 .editorconfig
 .eslintignore
 .eslintrc
+
+.gitignore
+
+gulpfile.js
 
 # NPM
 .npmignore
