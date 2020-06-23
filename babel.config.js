@@ -11,6 +11,12 @@ const {
 
 debug.enable(DEBUG)
 
+function env () {
+  log({ NODE_ENV })
+
+  return NODE_ENV === 'production'
+}
+
 const presets = [
   [
     '@babel/env', {
@@ -23,14 +29,8 @@ const presets = [
   ]
 ]
 
-function using () {
-  log({ NODE_ENV })
-
-  return NODE_ENV === 'production'
-}
-
 module.exports = (api) => {
-  if (api) api.cache.using(using)
+  if (api) api.cache.using(env)
 
   return {
     compact: true,
