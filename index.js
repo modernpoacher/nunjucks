@@ -1,8 +1,22 @@
 const Nunjucks = require('nunjucks')
 
+const debug = require('debug')
+
+const log = debug('@modernpoacher/nunjucks')
+
+const {
+  env: {
+    DEBUG = '@modernpoacher/nunjucks'
+  }
+} = process
+
+debug.enable(DEBUG)
+
 let ENVIRONMENT
 
 function compile (src, options = {}, next) {
+  log('compile')
+
   const template = Nunjucks.compile(src, ENVIRONMENT || (ENVIRONMENT = options.environment), (Reflect.has(options, 'filename') ? Reflect.get(options, 'filename') : null))
 
   return (next instanceof Function)
@@ -11,6 +25,8 @@ function compile (src, options = {}, next) {
 }
 
 function prepare (options = {}, next = () => {}) {
+  log('prepare')
+
   const {
     path,
     compileOptions = {}
@@ -25,10 +41,12 @@ function prepare (options = {}, next = () => {}) {
 }
 
 function configure (path, options = { watch: false }) {
+  log('configure')
+
   return (
     ENVIRONMENT = Nunjucks.configure(path, options)
   )
-};
+}
 
 module.exports = {
   ...Nunjucks,
