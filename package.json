@@ -2,18 +2,18 @@
   "name": "@modernpoacher/nunjucks",
   "version": "3.0.6",
   "description": "Nunjucks for Hapi",
-  "main": "./index.js",
-  "license": "MIT",
   "keywords": [
     "hapi",
     "nunjucks"
   ],
+  "main": "./index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.18.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/modernpoacher/nunjucks.git"
-  },
-  "engines": {
-    "node": ">=12.18.1"
   },
   "scripts": {
     "lint": "eslint .",
