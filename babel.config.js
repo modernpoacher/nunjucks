@@ -11,6 +11,8 @@ const {
 
 debug.enable(DEBUG)
 
+log('`modernpoacher/nunjucks` is awake')
+
 function env () {
   log({ NODE_ENV })
 
