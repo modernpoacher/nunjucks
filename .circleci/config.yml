@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   publish:
     docker:
-      - image: circleci/node:12.4.0
+      - image: circleci/node:lts
     steps:
       - checkout
       - run:
