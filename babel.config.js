@@ -4,12 +4,9 @@ const log = debug('@modernpoacher/nunjucks')
 
 const {
   env: {
-    DEBUG = '@modernpoacher/nunjucks',
     NODE_ENV = 'development'
   }
 } = process
-
-debug.enable(DEBUG)
 
 log('`modernpoacher/nunjucks` is awake')
 
