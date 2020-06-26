@@ -4,13 +4,7 @@ const debug = require('debug')
 
 const log = debug('@modernpoacher/nunjucks')
 
-const {
-  env: {
-    DEBUG = '@modernpoacher/nunjucks'
-  }
-} = process
-
-debug.enable(DEBUG)
+log('`modernpoacher/nunjucks` is awake')
 
 let ENVIRONMENT
 
