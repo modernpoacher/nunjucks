@@ -19,7 +19,7 @@ const Nunjucks = require('@modernpoacher/nunjucks')
 const server = Hapi.server({ host, port })
 
 server.register(Vision)
-  .then(() => { 
+  .then(() => {
     server.views({
       relativeTo: currentDir,
         path: path.join(__dirname, 'views'),
@@ -62,7 +62,7 @@ env.addFilter('somefilter', (str, count) => {
 })
 
 server.register(Vision)
-  .then(() => { 
+  .then(() => {
     server.views({
       relativeTo: currentDir,
         path: viewPath,
