@@ -8,7 +8,7 @@ log('`modernpoacher/nunjucks` is awake')
 
 let ENVIRONMENT
 
-function compile (src, options = {}, next) {
+function compile (src, options = {}, next = null) {
   log('compile')
 
   const template = Nunjucks.compile(src, ENVIRONMENT || (ENVIRONMENT = options.environment), (Reflect.has(options, 'filename') ? Reflect.get(options, 'filename') : null))
