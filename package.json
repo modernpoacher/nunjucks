@@ -21,7 +21,7 @@
     "pre-commit": "npm run lint && git add *.js"
   },
   "dependencies": {
-    "debug": "^4.2.0"
+    "debug": "^4.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
