@@ -24,20 +24,20 @@
     "debug": "^4.3.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.13",
-    "@babel/core": "^7.12.13",
-    "@babel/eslint-parser": "^7.12.13",
-    "@babel/preset-env": "^7.12.13",
+    "@babel/cli": "^7.12.17",
+    "@babel/core": "^7.12.17",
+    "@babel/eslint-parser": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
     "@babel/register": "^7.12.13",
     "babel-loader": "^8.2.2",
-    "core-js": "^3.8.3",
+    "core-js": "^3.9.0",
     "cross-env": "^7.0.3",
-    "eslint": "^7.19.0",
+    "eslint": "^7.20.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "husky": "^4.3.8",
+    "eslint-plugin-promise": "^4.3.1",
+    "husky": "^5.0.9",
     "rimraf": "^3.0.2"
   },
   "peerDependencies": {
