@@ -1,6 +1,6 @@
 {
   "name": "@modernpoacher/nunjucks",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "Nunjucks for Hapi",
   "keywords": [
     "hapi",
@@ -18,7 +18,8 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "pre-commit": "npm run lint && git add *.js"
+    "gulp": "gulp --color",
+    "pre-commit": "npm run lint && git add *.js && npm run gulp -- pre-commit"
   },
   "dependencies": {
     "debug": "^4.3.2"
@@ -31,14 +32,13 @@
     "@babel/register": "^7.15.3",
     "babel-loader": "^8.2.2",
     "core-js": "^3.18.0",
-    "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "husky": "^7.0.2",
-    "rimraf": "^3.0.2"
+    "gulp": "^4.0.2",
+    "husky": "^7.0.2"
   },
   "peerDependencies": {
     "nunjucks": "^3.2.0"
