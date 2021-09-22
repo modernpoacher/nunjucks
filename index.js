@@ -4,7 +4,7 @@ const debug = require('debug')
 
 const log = debug('@modernpoacher/nunjucks')
 
-log('`modernpoacher/nunjucks` is awake')
+log('`@modernpoacher/nunjucks` is awake')
 
 let ENVIRONMENT
 
