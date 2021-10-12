@@ -1,6 +1,6 @@
 {
   "name": "@modernpoacher/nunjucks",
-  "version": "3.0.15",
+  "version": "3.0.16",
   "description": "Nunjucks for Hapi",
   "keywords": [
     "hapi",
@@ -32,9 +32,9 @@
     "@babel/register": "^7.15.3",
     "babel-loader": "^8.2.2",
     "core-js": "^3.18.2",
-    "eslint": "^7.32.0",
+    "eslint": "^8.0.0",
     "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-import": "^2.25.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "gulp": "^4.0.2",
