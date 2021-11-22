@@ -1,6 +1,6 @@
 {
   "name": "@modernpoacher/nunjucks",
-  "version": "3.0.52",
+  "version": "3.0.53",
   "description": "Nunjucks for Hapi",
   "keywords": [
     "hapi",
@@ -9,7 +9,7 @@
   "main": "./index.js",
   "license": "MIT",
   "engines": {
-    "node": ">=12.19.0"
+    "node": ">=16.13.0"
   },
   "repository": {
     "type": "git",
