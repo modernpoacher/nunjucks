@@ -1,6 +1,6 @@
 {
   "name": "@modernpoacher/nunjucks",
-  "version": "3.0.59",
+  "version": "3.0.60",
   "description": "Nunjucks for Hapi",
   "keywords": [
     "hapi",
@@ -22,7 +22,7 @@
     "pre-commit": "npm run lint && git add *.js && npm run gulp -- pre-commit"
   },
   "dependencies": {
-    "debug": "^4.3.2"
+    "debug": "^4.3.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
