@@ -1,6 +1,6 @@
 {
   "name": "@modernpoacher/nunjucks",
-  "version": "3.0.82",
+  "version": "3.0.83",
   "description": "Nunjucks for Hapi",
   "keywords": [
     "hapi",
