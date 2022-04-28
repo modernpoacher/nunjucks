@@ -31,7 +31,7 @@
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/register": "^7.17.7",
-    "@modernpoacher/hooks": "^1.0.89",
+    "@modernpoacher/hooks": "^1.0.90",
     "babel-loader": "^8.2.5",
     "core-js": "^3.22.2",
     "eslint": "7.32.0",
