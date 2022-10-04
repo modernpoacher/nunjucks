@@ -33,7 +33,7 @@
     "@babel/register": "^7.18.9",
     "@modernpoacher/hooks": "^1.0.212",
     "babel-loader": "^8.2.5",
-    "core-js": "^3.25.4",
+    "core-js": "^3.25.5",
     "eslint": "^8.24.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
