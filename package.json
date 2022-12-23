@@ -26,12 +26,12 @@
     "debug": "^4.3.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.19.3",
-    "@babel/core": "^7.20.5",
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.7",
     "@babel/eslint-parser": "^7.19.1",
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.18.9",
-    "@modernpoacher/hooks": "^1.0.270",
+    "@modernpoacher/hooks": "^1.0.271",
     "babel-loader": "^9.1.0",
     "core-js": "^3.26.1",
     "eslint": "^8.30.0",
