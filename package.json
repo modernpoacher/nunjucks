@@ -7,7 +7,11 @@
     "nunjucks"
   ],
   "main": "./index.js",
-  "author": "Jonathan Perry for Modern Poacher Limited <modernpoacher@modernpoacher.com>",
+  "author": {
+    "name": "Jonathan Perry for Modern Poacher Limited",
+    "email": "modernpoacher@modernpoacher.com",
+    "url": "http://modernpoacher.com"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=16.13.0"
@@ -24,11 +28,11 @@
     "debug": "^4.3.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.22.9",
-    "@babel/core": "^7.22.9",
-    "@babel/eslint-parser": "^7.22.9",
-    "@babel/preset-env": "^7.22.9",
-    "@modernpoacher/hooks": "^1.0.427",
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/eslint-parser": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@modernpoacher/hooks": "^1.0.428",
     "core-js": "^3.32.0",
     "eslint": "^8.46.0",
     "eslint-config-standard": "^17.1.0",
