@@ -28,11 +28,11 @@
     "debug": "^4.3.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.22.15",
-    "@babel/core": "^7.22.20",
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
     "@babel/eslint-parser": "^7.22.15",
     "@babel/preset-env": "^7.22.20",
-    "@modernpoacher/hooks": "^1.0.437",
+    "@modernpoacher/hooks": "^1.0.438",
     "core-js": "^3.32.2",
     "eslint": "^8.50.0",
     "eslint-config-standard": "^17.1.0",
