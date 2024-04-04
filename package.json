@@ -29,10 +29,10 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.24.1",
-    "@babel/core": "^7.24.3",
+    "@babel/core": "^7.24.4",
     "@babel/eslint-parser": "^7.24.1",
-    "@babel/preset-env": "^7.24.3",
-    "@modernpoacher/hooks": "^1.0.470",
+    "@babel/preset-env": "^7.24.4",
+    "@modernpoacher/hooks": "^1.0.471",
     "core-js": "^3.36.1",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
