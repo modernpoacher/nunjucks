@@ -36,7 +36,7 @@
     "core-js": "^3.37.1",
     "eslint": "8.57.0",
     "eslint-config-standard": "^17.1.0",
-    "husky": "^9.1.0"
+    "husky": "^9.1.1"
   },
   "peerDependencies": {
     "nunjucks": "^3.2.0"
