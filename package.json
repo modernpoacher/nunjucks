@@ -2,11 +2,12 @@
   "name": "@modernpoacher/nunjucks",
   "version": "3.1.118",
   "description": "Nunjucks for Hapi",
+  "type": "commonjs",
   "keywords": [
     "hapi",
     "nunjucks"
   ],
-  "main": "./index.js",
+  "main": "./index.cjs",
   "author": {
     "name": "Jonathan Perry for Modern Poacher Limited",
     "email": "modernpoacher@modernpoacher.com",
@@ -21,14 +22,13 @@
     "url": "git+https://github.com/modernpoacher/nunjucks.git"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint . --ext .cjs,.mjs",
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "debug": "^4.3.7"
   },
   "devDependencies": {
-    "@babel/cli": "^7.25.9",
     "@babel/core": "^7.26.0",
     "@babel/eslint-parser": "^7.25.9",
     "@babel/preset-env": "^7.26.0",
