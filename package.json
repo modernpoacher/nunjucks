@@ -2,12 +2,12 @@
   "name": "@modernpoacher/nunjucks",
   "version": "3.2.0",
   "description": "Nunjucks for Hapi",
-  "type": "commonjs",
   "keywords": [
     "hapi",
     "nunjucks"
   ],
   "main": "./index.cjs",
+  "type": "commonjs",
   "author": {
     "name": "Jonathan Perry for Modern Poacher Limited",
     "email": "modernpoacher@modernpoacher.com",
