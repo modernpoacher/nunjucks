@@ -22,19 +22,17 @@
     "url": "git+https://github.com/modernpoacher/nunjucks.git"
   },
   "scripts": {
-    "lint": "eslint . --ext .cjs,.mjs",
+    "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "debug": "^4.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.10",
-    "@babel/eslint-parser": "^7.26.10",
-    "@babel/preset-env": "^7.26.9",
-    "core-js": "^3.41.0",
-    "eslint": "8.57.1",
-    "eslint-config-standard": "^17.1.0",
+    "@sequencemedia/eslint-config-standard": "^0.2.44",
+    "@types/debug": "^4.1.12",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
     "husky": "^9.1.7"
   },
   "peerDependencies": {

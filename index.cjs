@@ -11,7 +11,8 @@ let ENVIRONMENT
 function compile (src, options = {}, next = null) {
   log('compile')
 
-  const template = Nunjucks.compile(src, ENVIRONMENT || (ENVIRONMENT = options.environment), (Reflect.has(options, 'filename') ? Reflect.get(options, 'filename') : null))
+  const fileName = ('filename' in options ? options.filename : null)
+  const template = Nunjucks.compile(src, ENVIRONMENT || (ENVIRONMENT = options.environment), fileName)
 
   return (next instanceof Function)
     ? next(null, (context, options, next) => template.render(context, next))
@@ -28,7 +29,9 @@ function prepare (options = {}, next = () => {}) {
 
   options.compileOptions = {
     ...compileOptions,
-    environment: ENVIRONMENT || configure(path, { watch: false })
+    environment: (
+      ENVIRONMENT || configure(path, { watch: false })
+    )
   }
 
   return next()

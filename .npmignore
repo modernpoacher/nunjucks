@@ -1,11 +1,10 @@
 .DS_Store
+node_modules
 
 .circleci
 .github
 
 .editorconfig
-.eslintignore
-.eslintrc
 
 .gitattributes
 .gitignore
@@ -13,3 +12,9 @@
 # NPM
 .npmignore
 .npmrc
+
+# ESLint
+eslint.*
+
+# Babel
+babel.*
