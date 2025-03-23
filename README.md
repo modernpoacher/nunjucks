@@ -28,8 +28,7 @@ server.register(Vision)
             module: Nunjucks
           }
         }
-      }
-    })
+      })
 
     server.route({
       method: 'GET',
@@ -71,8 +70,7 @@ server.register(Vision)
             module: Nunjucks
           }
         }
-      }
-    })
+      })
 
     server.route({
       method: 'GET',
