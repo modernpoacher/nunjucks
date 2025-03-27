@@ -22,22 +22,24 @@ server.register(Vision)
   .then(() => {
     server.views({
       relativeTo: currentDir,
-        path: path.join(__dirname, 'views'),
-        engines: {
-          html: {
-            module: Nunjucks
-          }
+      path: path.join(__dirname, 'views'),
+      engines: {
+        html: {
+          module: Nunjucks
         }
-      })
+      }
+    })
 
     server.route({
       method: 'GET',
       path: '/test',
-      handler: (request, h) => (
-        h.view('mytemplate', {
-          myvariable: 'myvalue'
-        })
-      )
+      handler (request, h) {
+        return (
+          h.view('mytemplate', {
+            myvariable: 'myvalue'
+          })
+        )
+      }
     })
   })
   .then(() => server.start())
@@ -64,22 +66,24 @@ server.register(Vision)
   .then(() => {
     server.views({
       relativeTo: currentDir,
-        path: viewPath,
-        engines: {
-          html: {
-            module: Nunjucks
-          }
+      path: viewPath,
+      engines: {
+        html: {
+          module: Nunjucks
         }
-      })
+      }
+    })
 
     server.route({
       method: 'GET',
       path: '/test',
-      handler: (request, h) => (
-        h.view('mytemplate', {
-          myvariable: 'myvalue'
-        })
-      )
+      handler (request, h) {
+        return (
+          h.view('mytemplate', {
+            myvariable: 'myvalue'
+          })
+        )
+      }
     })
   })
   .then(() => server.start())
