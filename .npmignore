@@ -3,6 +3,7 @@ node_modules
 
 .circleci
 .github
+.husky
 
 .editorconfig
 
