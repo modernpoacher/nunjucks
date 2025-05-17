@@ -29,9 +29,9 @@
     "debug": "^4.4.1"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "^0.2.58",
+    "@sequencemedia/eslint-config-standard": "^0.2.59",
     "@types/debug": "^4.1.12",
-    "eslint": "^9.26.0",
+    "eslint": "^9.27.0",
     "globals": "^16.1.0",
     "husky": "^9.1.7"
   },
