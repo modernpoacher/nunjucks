@@ -29,7 +29,7 @@
     "debug": "^4.4.3"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "^0.2.107",
+    "@sequencemedia/eslint-config-standard": "^0.2.125",
     "@types/debug": "^4.1.13",
     "eslint": "9.38.0",
     "globals": "^17.12.0",
